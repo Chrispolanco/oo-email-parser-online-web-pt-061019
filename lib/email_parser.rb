@@ -10,8 +10,10 @@ class EmailParser
   end 
   
   def parse 
-    @csv_emails.each do |csv_email|
-      csv_email.split
+    @csv_emails.map do |csv_email|
+      csv_email.split(" , ")
+    end 
+    return flatten.uniq 
   end 
 
 end 
