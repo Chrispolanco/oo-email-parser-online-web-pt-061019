@@ -11,10 +11,11 @@ class EmailParser
   end 
   
   def parse 
+    array = []
     csv_emails.split(/[,\s]+/).each do |csv_email|
-      @email << csv_email
+      array << csv_email
     end 
-  @email.flatten.uniq  
+  array.flatten.uniq  
   end 
 
 end 
