@@ -12,8 +12,7 @@ class EmailParser
   
   def parse 
     csv_emails.split(/[\s,]/ ," ").each do |csv_email|
-      binding.pry 
-    @@array << csv_email.delete
+      @@array << csv_email.delete
     end 
   @@array.flatten.uniq  
   end 
