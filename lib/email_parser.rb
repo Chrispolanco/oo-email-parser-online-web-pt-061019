@@ -4,15 +4,14 @@
 # or whitespace (' ').
 class EmailParser  
   attr_accessor :email, :csv_emails
-  
+  @@array = []
   def initialize(csv_emails)
-    @@array = []
     @csv_emails = csv_emails 
   end 
   
   def parse 
     csv_emails.split(",").each do |csv_email|
-    array << csv_email 
+    @@array << csv_email 
     end 
     return array.flatten.uniq 
   end 
