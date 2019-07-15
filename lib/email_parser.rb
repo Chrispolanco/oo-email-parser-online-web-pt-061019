@@ -11,7 +11,7 @@ class EmailParser
   end 
   
   def parse 
-    @csv_emails.map do |csv_email|
+    @csv_emails.each do |csv_email|
       @@array << csv_email.split(" , ")
     end 
     return array.flatten.uniq 
