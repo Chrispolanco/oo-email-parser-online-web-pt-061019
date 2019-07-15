@@ -7,10 +7,10 @@ class EmailParser
   @@emails = [] 
   
   def initialize(email)
-    @@self.class.all << emails
+    parse 
   end
   
   def parse 
-    array << email 
+    @@self.class.all << emails
   end 
 end 
