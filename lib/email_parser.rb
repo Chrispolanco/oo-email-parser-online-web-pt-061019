@@ -12,6 +12,6 @@ class EmailParser
   end
   
   def parse 
-    array 
+    array << emails 
   end 
 end 
