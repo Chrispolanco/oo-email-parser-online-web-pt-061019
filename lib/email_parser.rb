@@ -6,14 +6,15 @@ class EmailParser
   attr_accessor :email, :csv_emails
   
   def initialize(csv_emails)
+    @@array = []
     @csv_emails = csv_emails 
   end 
   
   def parse 
     @csv_emails.map do |csv_email|
-      csv_email.split(" , ")
+      @@array << csv_email.split(" , ")
     end 
-    return flatten.uniq 
+    return array.flatten.uniq 
   end 
 
 end 
