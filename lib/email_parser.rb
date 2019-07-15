@@ -11,7 +11,7 @@ class EmailParser
   end 
   
   def parse 
-    csv_emails.split(/[\s,,]/).each do |csv_email|
+    csv_emails.split(/\s|,/).each do |csv_email|
     @@array << csv_email.delete
     end 
   @@array.flatten.uniq  
