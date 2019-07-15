@@ -13,7 +13,7 @@ class EmailParser
     csv_emails.split(",").each do |csv_email|
     @@array << csv_email 
     end 
-    return @@array.flatten.uniq 
+  return @@array.flatten.uniq 
   end 
 
 end 
