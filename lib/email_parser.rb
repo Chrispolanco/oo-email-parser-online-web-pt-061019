@@ -5,16 +5,16 @@ require "pry"
 # or whitespace (' ').
 class EmailParser  
   attr_accessor :email, :csv_emails
-  @@array = []
+
   def initialize(csv_emails)
     @csv_emails = csv_emails 
   end 
   
   def parse 
     csv_emails.split(/[,\s]+/).each do |csv_email|
-      @@array << csv_email
+      @email << csv_email
     end 
-  @@array.flatten.uniq  
+  @email.flatten.uniq  
   end 
 
 end 
