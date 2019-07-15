@@ -7,7 +7,8 @@ class EmailParser
   @@emails = [] 
   
   def initialize(email)
-     
+    @email = email 
+    
   end
   
   def parse 
